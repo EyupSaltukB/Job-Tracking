@@ -1,0 +1,200 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #242424;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+
+    div{
+        display: flex;
+        gap: 20px;
+    }
+    
+    a{
+        font-size: 19px;
+        color: rgb(103, 226, 103);
+        text-decoration: none;
+    }
+
+    .active{
+        font-weight: bold;
+        text-shadow: 0 0 20px rgb(118, 231, 133);
+    }
+}
+
+
+//  İş Kartları
+.card{
+    background: rgb(51, 51, 51);
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    &:hover{
+        scale: 1.04 ;
+        transition: all 0.7s;
+        background: rgb(93, 93, 93);
+    }
+
+    .head{
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .letter{
+            height: 60px;
+            width: 60px;
+            background: rgb(1, 93, 1);
+            display: grid;
+            place-items: center;
+            border-radius: 10px;
+            font-size: 30px;
+        }
+
+        .info{
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
+    .body{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 30px;
+
+        .field{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img{
+                width: 30px;
+            }
+        }
+
+        .status{
+            span{
+                padding: 10px 20px;
+                border-radius: 10px;
+            }
+
+            .interview{
+                background: rgb(245, 124, 11);
+            }
+            .rejected{
+                background: rgb(216, 1, 1);
+            }
+            .pending{
+                background: rgb(27, 187, 223);
+            }
+            .default{
+                background: gray;
+            }
+        }
+    }
+
+}
+
+
+// İş Listesi
+.list-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 50px;    
+    padding: 50px;
+}
+
+.list-page{
+    padding: 40px;
+}
+
+.job-count{
+    margin-left: 50px;
+}
+
+
+//  Ekleme Sayfası 
+.add-sec{
+    box-shadow: 0 17px 150px 14px rgba(40, 194, 40, 0.56);
+    max-width: 700px;
+    margin: 100px auto;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.add-sec h2{
+    display: flex;
+    align-items: center;
+}
+
+form{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+
+    div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    div input, 
+    div select{
+        padding: 8px 12px;
+        margin-top: 5px;
+        border-radius: 10px;
+        outline: none;
+    }
+
+    div:last-child{
+        display: flex;
+        justify-content: end;
+        align-items: end;
+    }
+    
+    button{
+        padding: 10px 40px;
+        background: black;
+        color: white;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: all 300ms;
+        &:hover{
+            scale: 0.95;
+            box-shadow: 0 0 7px rgba(0, 128, 0, 0.623);
+        }
+    }
+}
+
+// Filtreleme
+
+.filter-sec{
+    @extend .add-sec;
+    max-width: 1000px;
+    margin-top: 10px;
+
+    form{
+        margin-top: 20px;
+    }
+
+    .button-area{
+        align-items: start;
+    }
+}
