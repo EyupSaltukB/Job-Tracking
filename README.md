@@ -1,4 +1,4 @@
-# JOB TRACKING (React + Vite)
+# Job Tracking System (React + Vite)
 
 Redux Toolkit ile İş Ekleme ve İş Listesinden oluşan iki sayfalı bir İş Takip ekranı oluşturdum.
 Sayfalama yapısı için react-router-dom kullandım. 
